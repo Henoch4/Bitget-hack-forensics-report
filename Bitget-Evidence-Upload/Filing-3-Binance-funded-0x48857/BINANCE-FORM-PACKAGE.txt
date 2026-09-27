@@ -1,0 +1,34 @@
+BINANCE FRAUD REPORT — copy-paste package (Bitget hack, Binance-funded consolidation wallet)
+Form: Report Type = Other Fraud Leads
+
+=== 1. URL INFORMATION (paste, space-separated) ===
+https://blockscan.com/Address/0x21a31ee1afc51d94c2efccaa2092ad1028285549 https://www.bitget.com/support/articles/12560603896108 https://trace.bgblockchain.xyz/v2#explorer
+
+=== 2. CHANNELS OF OBTAINING THE INFORMATION ===
+Select the option matching independent on-chain blockchain investigation/tracing.
+(Method: Blockscout + Etherscan/Blockscan label cross-checks; no insider source.)
+
+=== 3. DETAILED CONTACT INFORMATION (this field = THE SUSPECT's identifiers, NOT yours — max 150 chars, 145 used) ===
+Suspect UID/email unknown — identify via wallet 0x48857fc6B57ac0c60360568279C8Ac90a5427c8E (5 Binance withdrawals Sep 25; hashes in description).
+
+NOTE: this field wants the wrongdoer's Binance UID / email / phone / socials, which no outsider has — only Binance can map these wallets to accounts, and that mapping IS this report's request. Your own contact goes nowhere in this form (you submit logged into your Binance account); optionally append one line "Reporter: okumagbeenoch4@gmail.com" at the end of Brief Description (budget allows: ~2000/3500 used).
+
+=== 4. BRIEF DESCRIPTION (paste; ~2000 chars, limit 3500) ===
+Bitget $387.5M hack (Sep 24-26, 2026) — Binance-funded consolidation wallet feeding attacker.
+
+Intermediate wallet 0x48857fc6B57ac0c60360568279C8Ac90a5427c8E (first seen Sep 25) received funds from five Binance-controlled hot wallets within 18 minutes on Sep 25, 2026 (16:09-16:27 UTC), swapped USDT to ETH via MetaSwap, and forwarded 457.896 ETH to confirmed Bitget attacker address 0xA6dD3F218B65E32Ccc37BE30f74884133c655545 (listed in Bitget's tracker and the GoPlus blacklist) on Sep 26, 02:26 UTC. The intermediate wallet is now emptied (0.0009 ETH remainder) — this report targets the UPSTREAM Binance accounts, not that wallet.
+
+The five Binance-side withdrawals total 257.6345973 ETH + 545,021.830744 USDT:
+1. 0xd1f0af1caaf0ac9d7e8076c5a98dd3e2bc31865c7514c7f8b48bd791b8dfdfff — 88.3473941 ETH from Binance 16 0xDFd5293D8e347dFe59E90eFd55b2956a1343963d
+2. 0xbaf8da62e44d7c1de3c468c44a787dd54227fad3c3a1fb23ef72ef5f925831fb — 89.3583821 ETH from Binance 18 0x9696f59E4d72E237BE84fFD425DCaD154Bf96976
+3. 0x077a1a7943afcc40d1d5e3312d8d628096728d316dbaa82af8a11e7c9d333229 — 284,896.782163 USDT from Binance 14 0x28C6c06298d514Db089934071355E5743bf21d60
+4. 0x53d461a11e202d378744bfa284d5aa50a41a98c84ff25dba16e9c3f63cef7856 — 260,125.048581 USDT from Binance 15 0x21a31Ee1afC51d94C2eFcCAa2092aD1028285549 (independently labeled Binance 15 / Exchange Deposit Address on Blockscan)
+5. 0xaa03bc66cdbafa89f0de507b9f2f5da65d9fafa0f81b2de71a22e171e444d6de — 79.9288211 ETH from Binance 17 0x56Eddb7aa87536c09CCc2793473599fD21A8b17F
+
+Consolidation: 0xacb85009add794d67e025cbb4c3acab469c1ec33cef24cb36bf38ecb877797f7 — 457.896 ETH to the attacker. Gas linkage: 0.0903318 ETH from SideShift hot wallet 0xcDd37Ada79F589c15bD4f8fD2083dc88E34A2af2 (tx 0x93a311bd40aec083924a4b5496c987266f739f6ec5b9af208bdf4d9a690dae38), tying this leg to the attacker's TIA cash-out trail.
+
+Request: identify the KYC'd account(s) behind these five withdrawals; freeze any remaining deposit-side balances and linked accounts; check whether the deposits funding them are Bitget-stolen funds. Cross-reference: Bitget bounty lead 260926-220130-QF7O (+ correction 260926-222530-IMTY).
+
+=== 5. SUPPORTING MATERIALS (upload; max 10 files, 10MB each: pdf/jpg/jpeg/png/txt) ===
+- Upload bitget_QF7O_hashes.txt (same folder as this file) as the .txt evidence.
+- Optionally attach explorer screenshots of the 5 funding txs + consolidation tx.
