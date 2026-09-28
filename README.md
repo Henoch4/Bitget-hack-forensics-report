@@ -3,13 +3,15 @@
 Investigator: **Henoch** (okumagbeenoch4@gmail.com). Free-tools investigation, public explorers only. No private keys touched. All filings through Bitget's trace API (`trace.bgblockchain.xyz`) — single-channel per their no-duplicate notice.
 
 - Incident: backend signing-flow forgery Sep 24 18:31 UTC, $387.5M across 12 chains. No key leak. DPRK/Lazarus-linked (Specter/Elliptic/GoPlus).
-- **13 leads filed** to Bitget (see table below). 10 clean, 3 acknowledged duplicates (fixed).
+- **15 leads filed** to Bitget (see table below). 12 clean, 3 acknowledged duplicates (fixed).
 - Report: `REPORT-SUPPLEMENT.md` (all findings through Sep 28) + `EVIDENCE.md` (full tx hashes). Evidence: `evidence/` + `Bitget-Evidence-Upload/`.
 
 ## Leads filed (all verified in `/api/report/mine`)
 
 | Ref | Chain | Target | Type | Status |
 |---|---|---|---|---|
+| `260928-215012-CXFB` | ETH | `0x4fEB8…88AB` | Live peel hub (777 ETH, auto-fanout) + 5 untracked hops | ✅ filed |
+| `260928-213158-3GGU` | multi | 5 aliases | ZachXBT Chinese-launderer identities (Discord/TG + txs) | ✅ filed |
 | `260928-080321-KJLL` | ETH | `0xbA3c…AdeC` | New untracked drainage dest (594 ETH) | ✅ filed |
 | `260928-061523-4KF4` | XRP | `rNxp4h…` | Duplicate (poller bug) | ⚠️ dup |
 | `260928-061344-HEME` | XRP | `rNxp4h…` | Duplicate (poller bug) | ⚠️ dup |
@@ -32,6 +34,8 @@ Investigator: **Henoch** (okumagbeenoch4@gmail.com). Free-tools investigation, p
 - **Binance KYC thread**: `0x48857…` received 257 ETH + 545k USDT from Binance hot wallets 14/15/16/17/18, forwarded 457.896 ETH to attacker `0xA6dD3F…`. Emptied.
 - **SideShift TIA**: 39,550.74 TIA still live at `celestia1p09…` (not in Bitget tracker).
 - **Reviewed oracle**: `/api/reviewed` now live — 198 addresses classified. Our XRP addresses CEX-verified; `rBuZfn…` corrected to OKX (was filed as Bithumb).
+- **Sep 28 live peel**: vault `0x600cfeDc` re-used as hub — 4,326 ETH in from attacker dest, ~4,950 ETH peeled to 11 hops (all tracked), converging on untracked fan-out hub `0x4fEB8…88AB` (777 ETH, 11–13 ETH chunks every 12s).
+- **ZachXBT thread** (Sep 28): 5 Chinese laundering aliases openly coordinating in Discord/TG; funds chain-hopping bridges → Wasabi. Identity lead filed.
 
 ## Standing rules
 
