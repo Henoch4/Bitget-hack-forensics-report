@@ -3,6 +3,8 @@ FORENSICS-PLAYBOOK.md
 LEADS-LOG.md
 auto-poller.ps1
 poller-loop.ps1
+PUSH_UPDATE.bat
+xrp-poll.ps1
 poller-state/
 
 # OS artifacts
