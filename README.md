@@ -4,7 +4,7 @@ Investigator: **Henoch** (okumagbeenoch4@gmail.com). Free-tools investigation, p
 
 - Incident: backend signing-flow forgery Sep 24 18:31 UTC, $387.5M across 12 chains. No key leak. DPRK/Lazarus-linked (Specter/Elliptic/GoPlus).
 - **13 leads filed** to Bitget (see table below). 10 clean, 3 acknowledged duplicates from a poller state bug (fixed).
-- Report: `Bitget-Hack-Forensic-Report-Sep2026.docx` (AI markers: 0). Evidence: `evidence/` + `Bitget-Evidence-Upload/`.
+- Report: `REPORT-SUPPLEMENT.md` (all findings through Sep 28) + `EVIDENCE.md` (full tx hashes). Evidence: `evidence/` + `Bitget-Evidence-Upload/`.
 
 ## Leads filed (all verified in `/api/report/mine`)
 
