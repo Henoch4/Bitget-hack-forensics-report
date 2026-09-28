@@ -33,9 +33,9 @@ Investigator: **Henoch** (okumagbeenoch4@gmail.com). Free-tools investigation, p
 - **SideShift TIA**: 39,550.74 TIA still live at `celestia1p09…` (not in Bitget tracker).
 - **Reviewed oracle**: `/api/reviewed` now live — 198 addresses classified. Our XRP addresses CEX-verified; `rBuZfn…` corrected to OKX (was filed as Bithumb).
 
-## Auto-poller (v2)
+## Auto-poller (v2) — local only
 
-`auto-poller.ps1` — runs every 5 min via Windows Task Scheduler (`Bitget-XRP-Poller`).
+Runs every 5 min via Windows Task Scheduler (`Bitget-XRP-Poller`). Script and state are git-ignored (not public).
 
 - **Rate limiter**: 5/min, 6/10min, 500/day. Auto-throttles.
 - **Reviewed oracle**: skips `not_attacker` addresses before filing.
@@ -45,7 +45,7 @@ Investigator: **Henoch** (okumagbeenoch4@gmail.com). Free-tools investigation, p
 - **Submission gatekeeper**: dedup, retry-on-429, abort-on-403, field validation, quote-ref.
 - **State**: crash-safe (intent-then-send, atomic writes).
 
-Log: `poller-state/poller.log`. Alerts: `poller-state/ALERTS.txt`.
+Note: scheduled task requires AC power (uncheck "Stop On Battery Mode" in Task Scheduler GUI for battery operation).
 
 ## Standing rules
 
