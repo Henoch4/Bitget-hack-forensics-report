@@ -1,0 +1,10 @@
+# Sensitive investigation files - keep local only
+FORENSICS-PLAYBOOK.md
+LEADS-LOG.md
+auto-poller.ps1
+poller-loop.ps1
+poller-state/
+
+# OS artifacts
+Thumbs.db
+desktop.ini
