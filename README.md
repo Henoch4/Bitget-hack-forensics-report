@@ -3,7 +3,7 @@
 Investigator: **Henoch** (okumagbeenoch4@gmail.com). Free-tools investigation, public explorers only. No private keys touched. All filings through Bitget's trace API (`trace.bgblockchain.xyz`) — single-channel per their no-duplicate notice.
 
 - Incident: backend signing-flow forgery Sep 24 18:31 UTC, $387.5M across 12 chains. No key leak. DPRK/Lazarus-linked (Specter/Elliptic/GoPlus).
-- **13 leads filed** to Bitget (see table below). 10 clean, 3 acknowledged duplicates from a poller state bug (fixed).
+- **13 leads filed** to Bitget (see table below). 10 clean, 3 acknowledged duplicates (fixed).
 - Report: `REPORT-SUPPLEMENT.md` (all findings through Sep 28) + `EVIDENCE.md` (full tx hashes). Evidence: `evidence/` + `Bitget-Evidence-Upload/`.
 
 ## Leads filed (all verified in `/api/report/mine`)
@@ -32,20 +32,6 @@ Investigator: **Henoch** (okumagbeenoch4@gmail.com). Free-tools investigation, p
 - **Binance KYC thread**: `0x48857…` received 257 ETH + 545k USDT from Binance hot wallets 14/15/16/17/18, forwarded 457.896 ETH to attacker `0xA6dD3F…`. Emptied.
 - **SideShift TIA**: 39,550.74 TIA still live at `celestia1p09…` (not in Bitget tracker).
 - **Reviewed oracle**: `/api/reviewed` now live — 198 addresses classified. Our XRP addresses CEX-verified; `rBuZfn…` corrected to OKX (was filed as Bithumb).
-
-## Auto-poller (v2) — local only
-
-Runs every 5 min via Windows Task Scheduler (`Bitget-XRP-Poller`). Script and state are git-ignored (not public).
-
-- **Rate limiter**: 5/min, 6/10min, 500/day. Auto-throttles.
-- **Reviewed oracle**: skips `not_attacker` addresses before filing.
-- **Balance watch**: hourly TIA/BTC/ETH-parks snapshot.
-- **Holdings diff**: hourly tracker snapshot → new addresses → tx scan.
-- **Adaptive cadence**: feeder quiet >1h → slow mode; activity → fast mode.
-- **Submission gatekeeper**: dedup, retry-on-429, abort-on-403, field validation, quote-ref.
-- **State**: crash-safe (intent-then-send, atomic writes).
-
-Note: scheduled task requires AC power (uncheck "Stop On Battery Mode" in Task Scheduler GUI for battery operation).
 
 ## Standing rules
 
