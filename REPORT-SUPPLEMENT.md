@@ -81,7 +81,12 @@ Deployed and running. Architecture:
 
 ## 9. Leads Summary
 
-**13 leads filed** (10 clean, 3 acknowledged duplicates):
+**15 leads filed** (12 clean, 3 acknowledged duplicates):
+
+| Ref | Type | Status |
+|---|---|---|
+| CXFB | Live peel hub + untracked hops (Sep 28) | [filed] |
+| 3GGU | ZachXBT launderer identities (Sep 28) | [filed] |
 
 | Ref | Type | Status |
 |---|---|---|
@@ -99,10 +104,28 @@ Deployed and running. Architecture:
 | 4KF4 | Duplicate (poller bug) | ⚠️ |
 | UMKO | Drainage (pre-fix, ~CKSF dup) | ⚠️ |
 
-## 10. What's Next
+## 10. What's Next (updated Sep 30)
 
-- XRP feeder still paused — auto-poller will file supplements when it resumes
-- Circle email sent — awaiting response
+- XRP feeder resumed with small dribbles (2-18k XRP) - auto-skipped, CEX-verified dest, no filing
+- Binance XRP deposit swept to house (304 left) - freeze fate is Binance internal decision on V4U3/SBDZ/55YM
+- Circle email sent - awaiting response
 - Binance portal supplement still pending (user action)
-- DOCX regeneration pending (needs original generation script)
-- Evidence PNGs for new findings pending (user doesn't have time for screenshots)
+- Poller runs locally with self-heal; VPS migration planned (DigitalOcean, then Hetzner)
+
+## 11. Sep 29-30 findings
+
+CEX-TAG SWEEP (reviewed endpoint now items-based: 201 addrs, cex=7, vault=25, arb=16, attacker=144):
+- Binance-XRP rNxp4h8apvRis6mJf9Sh8C6iRxfrDWN7AV = 304.39 XRP (was 125,904 at filing). Drained live Sep 29 21:55Z into house rDAE53VfMvftPB4ogpWGWvzkQxfht6JPxr (14,597 XRP tx 659452A4... plus chunks) - venue plumbing, not attacker walk. Parent verified binance.com.
+- Entity/OKX-XRP rBuZfn1m4tA6znziHsRp9AyC1M3qg6rgbF = 35,703,820 XRP live (commingled hot, not attacker-segregated - no filing).
+- MEXC-XRP rs2dgzYeqYqsk8bvkQR5YPyqsXYcA24MP2 = 5,220,812 XRP (operational float; 25 recent txs all retail 10-980 XRP, no attacker sender - not our lead, no filing).
+- Binance-EVM 0x884c7f4778bb1831a7f2691c194cd51e9644f60e = dust (0.0018 ETH + 0.00016 BNB).
+- Binance-BTC 136QhLWFXgza1MJ2nPTB9y6zNUjQZACikN = 0. FixedFloat-BTC hot = 86.7 BTC commingled. Kraken-ALGO hot = 150.5M ALGO commingled.
+- CONCLUSION: no segregated attacker balance on any CEX tag. All freeze asks filed; venues act internally.
+
+HUB DRAIN: CXFB fan-out hub 0x4fEB8DD18F442ff67b521b5A5bc4c3824e3288AB 777.16 -> 159.53 ETH. Still untracked ~31h after filing (verified against live holdings Sep 29 21:40Z).
+
+NEAR INTENTS (intel only, no hashes): $50M+ attempts blocked by SHIELD, $166k slipped through, $503k frozen mid-execution (restricted pending Bitget legal claim; NEAR waived bounty). Corroborates live bridge-hopping.
+
+TRACKER GROWTH (Bitget's own discovery, recon only): BTC 946->1638, ETH 861->1366, ARB 115->238, TRON 31->50, SOL 8->19, new HYPERLIQUID chain (+6), ZEC 9->11, 1 ALGO addr. Reviewed format changed to items-based with English names/notes.
+
+XRP FEEDER: paused 42h after Sep 27, resumed Sep 29 with small sends (2,119 / 17,898 / 15,275 XRP batches to CEX-verified Binance wallet - auto-skipped by reviewed oracle, no filings).

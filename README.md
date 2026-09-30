@@ -1,10 +1,10 @@
-# Bitget Hack — On-Chain Forensic Report (Sep 24–28, 2026)
+# Bitget Hack — On-Chain Forensic Report (Sep 24–30, 2026)
 
 Investigator: **Henoch** (okumagbeenoch4@gmail.com). Free-tools investigation, public explorers only. No private keys touched. All filings through Bitget's trace API (`trace.bgblockchain.xyz`) — single-channel per their no-duplicate notice.
 
 - Incident: backend signing-flow forgery Sep 24 18:31 UTC, $387.5M across 12 chains. No key leak. DPRK/Lazarus-linked (Specter/Elliptic/GoPlus).
 - **15 leads filed** to Bitget (see table below). 12 clean, 3 acknowledged duplicates (fixed).
-- Report: `REPORT-SUPPLEMENT.md` (all findings through Sep 28) + `EVIDENCE.md` (full tx hashes). Evidence: `evidence/` + `Bitget-Evidence-Upload/`.
+- Report: `REPORT-SUPPLEMENT.md` (all findings through Sep 30) + `EVIDENCE.md` (full tx hashes). Evidence: `evidence/` + `Bitget-Evidence-Upload/`.
 
 ## Leads filed (all verified in `/api/report/mine`)
 
@@ -29,13 +29,17 @@ Investigator: **Henoch** (okumagbeenoch4@gmail.com). Free-tools investigation, p
 ## Key findings
 
 - **Dormant vaults drained Sep 27**: both 10k-ETH vaults emptied (~20k ETH total). Funds consolidated into 19 tracker addresses + fresh untracked wallets (`0xbA3c…AdeC` = 594 ETH).
-- **Live XRP flow**: feeder `rNnMCi68…` → Binance `rNxp4h…` (Tag 470475839). Day total 233,228 XRP. Feeder paused since 07:32 UTC.
+- **Live XRP flow**: feeder `rNnMCi68…` → Binance `rNxp4h…` (Tag 470475839). Paused 42h, resumed Sep 29 with small dribbles (2–18k XRP, auto-skipped — CEX-verified dest).
 - **Circle CCTP**: ~40M USDC approved for bridge from drained-vault consolidation. Burn confirmed on-chain.
 - **Binance KYC thread**: `0x48857…` received 257 ETH + 545k USDT from Binance hot wallets 14/15/16/17/18, forwarded 457.896 ETH to attacker `0xA6dD3F…`. Emptied.
 - **SideShift TIA**: 39,550.74 TIA still live at `celestia1p09…` (not in Bitget tracker).
-- **Reviewed oracle**: `/api/reviewed` now live — 198 addresses classified. Our XRP addresses CEX-verified; `rBuZfn…` corrected to OKX (was filed as Bithumb).
+- **Reviewed oracle**: `/api/reviewed` now items-based — 201 addresses (cex 7, vault 25, arb 16, attacker 144). Our XRP addresses CEX-verified; `rBuZfn…` corrected to OKX (was filed as Bithumb).
 - **Sep 28 live peel**: vault `0x600cfeDc` re-used as hub — 4,326 ETH in from attacker dest, ~4,950 ETH peeled to 11 hops (all tracked), converging on untracked fan-out hub `0x4fEB8…88AB` (777 ETH, 11–13 ETH chunks every 12s).
 - **ZachXBT thread** (Sep 28): 5 Chinese laundering aliases openly coordinating in Discord/TG; funds chain-hopping bridges → Wasabi. Identity lead filed.
+- **CEX sweep Sep 29**: all 7 CEX tags checked live. Binance XRP `rNxp4h…` swept 125,904 → 304 XRP into house wallet (venue plumbing, Sep 29 21:55Z) — freeze fate is now Binance's internal decision on our 3 asks. No segregated attacker balance remains on any CEX tag (OKX/MEXC/FixedFloat/Kraken balances are commingled venue funds).
+- **Hub drained**: CXFB fan-out hub `0x4fEB8…88AB` 777 → 159.5 ETH. Still untracked ~31h after filing.
+- **NEAR Intents** (Sep 28, intel): $50M+ attempts blocked, $166k slipped, $503k frozen by NEAR (their freeze, not our lead — no filing).
+- **Tracker growth**: BTC 946→1638, ETH 861→1366, new Hyperliquid chain (Bitget's own discovery).
 
 ## Standing rules
 
